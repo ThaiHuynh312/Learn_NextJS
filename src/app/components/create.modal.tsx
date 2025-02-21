@@ -15,8 +15,12 @@ interface IProps {
   mutate: () => void;
 }
 
-function CreateModal({ showModalCreate, setShowModalCreate, user, mutate }: IProps) {
-
+function CreateModal({
+  showModalCreate,
+  setShowModalCreate,
+  user,
+  mutate,
+}: IProps) {
   const [name, setName] = useState<string>("");
   const [nameClass, setNameClass] = useState<string>("");
 
@@ -69,24 +73,24 @@ function CreateModal({ showModalCreate, setShowModalCreate, user, mutate }: IPro
         size="lg"
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Thông tin sinh viên</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Họ và tên</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Ho va ten"
+                placeholder="Nhập họ và tên"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Class</Form.Label>
+              <Form.Label>Lớp</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Lop"
+                placeholder="Nhập tên lớp"
                 value={nameClass}
                 onChange={(e) => setNameClass(e.target.value)}
               />
